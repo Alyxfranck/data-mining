@@ -28,16 +28,17 @@ To verify if the API is working, navigate to the `make` directory and execute th
 
 ```sh
 cd make
-python test.py # Ensure the script is executable (chmod +x test_file.sh if needed)
+python test.py
 ```
 
 If the `jobid` is returned, the API is successfully operational.
 
 ## Quickstart 
+[Guide to Data Mining](https://alixf.ch/blog/guide-data-mining)  
 
-The 'make'  directory contains various tools gater information from websites. 
+The `make`  directory contains various tools gater information from websites. 
 
-#### 'main.py'
+#### `main.py`
 This script uses a list of urls in JSON format that will be acessed by the api and return data you enquire. Adjust the script to your needs by changeing the Xpaths. 
 - by executing this file, while the api is running, you will submit jobs that return data the `make/data/` directory. 
 
