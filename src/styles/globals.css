@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --delete-red: #ef4444;
+  --delete-red-hover: #ff6969;
+}
+
+#__next {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Schibsted Grotesk", sans-serif;
+}
+
+.MuiPopover-paper {
+  padding: 0 !important;
+}
