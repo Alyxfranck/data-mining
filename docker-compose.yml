@@ -1,19 +1,5 @@
 services:
-  scraperr:
-    depends_on:
-      - scraperr_api
-    image: alyxfranck/scraperr:latest
-    build:
-      context: .
-      dockerfile: docker/frontend/Dockerfile
-    container_name: scraperr
-    command: ["npm", "run", "start"]
-    environment:
-      - NEXT_PUBLIC_API_URL=http://scraperr_api:8000 # your API URL
-      - SERVER_URL=http://scraperr_api:8000 # your docker container API URL
-   
-    networks:
-      - web
+
   scraperr_api:
     init: True
     image: alyxfranck/scraperr_api:latest
@@ -21,6 +7,8 @@ services:
       context: .
       dockerfile: docker/api/Dockerfile
     environment:
+      - NEXT_PUBLIC_API_URL=http://scraperr_api:8000 # your API URL
+      - SERVER_URL=http://scraperr_api:8000 # your docker container API URL
       - LOG_LEVEL=INFO
       - SECRET_KEY=your_secret_key # used to encode authentication tokens (can be a random string)
       - ALGORITHM=HS256 # authentication encoding algorithm
