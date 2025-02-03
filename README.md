@@ -48,7 +48,7 @@ Feel free to contribute by submitting pull requests or opening issues for featur
 
 ## Acknowledgment
 
-This repository was created with the help of Jayden Pyles work 
+This repository was created with the help of Various repositories
 
 
 
