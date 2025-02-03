@@ -1,5 +1,5 @@
 
-# Data Mining
+# Data Mining API
 
 This repository provides a data mining toolbox designed for various data extraction and processing tasks. The project is containerized using Docker for easy deployment and management.
 
