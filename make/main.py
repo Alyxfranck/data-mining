@@ -31,9 +31,8 @@ logger.addHandler(file_handler)
 # Constants
 SUBMIT_URL = "http://localhost:8000/api/submit-scrape-job"
 STATUS_URL_TEMPLATE = "http://localhost/api/job/{}"
-AUTH_URL = "http://localhost/api/auth/token"  # Adjusted to the correct authentication endpoint
 INDEX_TRACK_FILE = 'index.json'
-MAX_RETRIES = 3
+MAX_RETRIES = 3 # adjust as you like, increase if you think the data is not being fetched 
 RETRY_DELAY = 1
 
 # Variables
@@ -60,7 +59,6 @@ def save_last_processed_index(index):
         json.dump({"index": index}, file)
     logger.info(f"Last processed index saved: {index}")
 
-# Function to authenticate and retrieve the access token
 
 
 # Function to submit a scraping job
@@ -71,8 +69,8 @@ def submit_scraping_job(url_to_scrape):
         "url": url_to_scrape,
         "elements": [
             {
-                "name": "ContactSection",
-                "xpath": '//*[@id="page-content"]/div/div/div/section[3]/div/div[4]',
+                "name": "give it a name",
+                "xpath": 'the xpath is to be found if you click on an element in the browser console',
                 "url": url_to_scrape
             }
         ],
@@ -145,8 +143,8 @@ def check_job_status(job_id):
         
         time.sleep(RETRY_DELAY)
 
-def process_result(result, url):
-    contact_text = "No contact available"
+def process_result(result, url): # this finction is a demo you need to adjust it to the name given in the api request and the format you want to have processed 
+    contact_text = "No c available"
     business_name = parse_business_name(url)  # Extract business name from the URL
     
     if result:
@@ -173,7 +171,7 @@ def process_result(result, url):
                 elif isinstance(first_element, str):
                     contact_text = first_element
 
-    # Append to output_data with parsed business name
+   
     contact_info = {
         "url": url,
         "business_name": business_name,
@@ -186,7 +184,7 @@ def process_result(result, url):
 try:
       
     # Load URLs from the JSON file and the last processed index
-    url_file_path = 'physiotherapie.json'
+    url_file_path = 'your urls .json' # add your own json data in this folder
     with open(url_file_path, 'r', encoding='utf-8') as file:
         urls = json.load(file)
     
