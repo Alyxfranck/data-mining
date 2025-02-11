@@ -3,6 +3,14 @@
 
 This repository provides a data mining toolbox designed for various data extraction and processing tasks. The project is containerized using Docker for easy deployment and management.
 
+If you are new to data mining tecniques check out my [Guide to Data Mining](https://alixf.ch/blog/guide-data-mining) 
+
+### Disclamer
+Data used to demonstrate the softweare was downloaded from the Local.ch/sitemap.xml and do not violate their terms of service.
+The data was publically accessable and did not require to accept any terms. 
+
+The data used here is for educational purposes only. 
+
 ## Requirements
 
 - Docker Desktop (Ensure it is installed and running)
@@ -42,13 +50,16 @@ The `make`  directory contains various tools gater information from websites.
 This script uses a list of urls in JSON format that will be acessed by the api and return data you enquire. Adjust the script to your needs by changeing the Xpaths. 
 - by executing this file, while the api is running, you will submit jobs that return data the `make/data/` directory. 
 
-## Contribution
+# Disclamer
 
-Feel free to contribute by submitting pull requests or opening issues for feature requests and bug reports.
+Data seen in this folder and the urls.json file were downloaded from the Local.ch sitemap and do therefore not violate their terms of service.
+The data was publically accessable and did not require to accept any terms. 
+
+The data used here is for educational purposes only. 
 
 ## Acknowledgment
 
-This repository was created with the help of Various repositories
+This repository was created with the help of Json Kritt, Luca Ferlon and Lola Hess. 
 
 
 
